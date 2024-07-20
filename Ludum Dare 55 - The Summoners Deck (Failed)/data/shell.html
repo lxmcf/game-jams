@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <!-- Favicon -->
+    <style>body { margin: 0px; } .emscripten { padding-right: 0; margin-left: auto; margin-right: auto; display: block; }</style>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/eligrey/FileSaver.js/dist/FileSaver.min.js"> </script>
+    <script type="text/javascript">function saveFileFromMEMFSToDisk(e,t){var a,i=/^ ( (?!chrome|android).)*safari/i.test(navigator.userAgent),r=FS.readFile(e);saveAs(a=i?new Blob([r.buffer],{type:"application/octet-stream"}):new Blob([r.buffer],{type:"application/octet-binary"}),t)} </script>
+</head>
+<body>
+    <canvas class="emscripten" id="canvas" oncontextmenu="return false;" tabindex=-1></canvas>
+    <p id="output"></p>
+
+    <script type="text/javascript">var Module={print:function(){var e=document.getElementById("output");return e&&(e.value=""),function(l){arguments.length>1&&(l=Array.prototype.slice.call(arguments).join(" ")),console.log(l),e&&(e.value+=l+"\n",e.scrollTop=e.scrollHeight)}}(),canvas:document.getElementById("canvas")};</script>
+    {{{ SCRIPT }}}
+</body>
+</html>

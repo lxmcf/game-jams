@@ -1,0 +1,27 @@
+#include "../scenes.h"
+
+static GameSceneId next_scene;
+
+void Init:NAME (void) {
+    next_scene = SCENE_NULL;
+}
+
+void Update:NAME (float delta) {
+
+}
+
+void Draw:NAME (void) {
+
+}
+
+void Draw:NAMEGui (void) {
+
+}
+
+void Unload:NAME (void) {
+
+}
+
+GameSceneId Finish:NAME (void) {
+    return next_scene;
+}

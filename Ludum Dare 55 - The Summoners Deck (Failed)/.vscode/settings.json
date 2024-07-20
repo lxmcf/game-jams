@@ -1,0 +1,9 @@
+{
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/home/lxmcf/Documents/Projects/ludum-dare-55/.BUILD/Linux",
+            "binaryPath": "/home/lxmcf/Documents/Projects/ludum-dare-55/.BUILD/Linux/game",
+            "binaryArgs": []
+        }
+    ]
+}

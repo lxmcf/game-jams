@@ -1,0 +1,689 @@
+{
+    "version": 100,
+    "name": "Ludum Dare 56",
+    "atlas": [
+        {
+            "name": "atlas",
+            "sprites": [
+                {
+                    "name": "fishTile_014",
+                    "file": "01925a63-43a1-7a52-92fd-69674749584c.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 0.00000000,
+                        "y": 0.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        128.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fishTile_015",
+                    "file": "01925a63-43a2-70e6-aba9-1b5fbba46b07.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 128.00000000,
+                        "y": 0.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        128.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fishTile_016",
+                    "file": "01925a63-43a3-722e-97f4-e938cd953dab.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 256.00000000,
+                        "y": 0.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        128.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fishTile_017",
+                    "file": "01925a63-43a4-7ff5-82dc-5b7e72ad4acb.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 384.00000000,
+                        "y": 0.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        128.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fishTile_032",
+                    "file": "01925a63-5412-7c30-b38c-bc0ada0a2111.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 512.00000000,
+                        "y": 0.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        128.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fishTile_033",
+                    "file": "01925a63-5413-7d2f-959b-0db1ba050be0.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 640.00000000,
+                        "y": 0.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        128.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fishTile_034",
+                    "file": "01925a63-5414-7dda-b09b-c2d0b5bd6590.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 768.00000000,
+                        "y": 0.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        128.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fishTile_035",
+                    "file": "01925a63-5415-7021-ba50-43e8589e5053.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 896.00000000,
+                        "y": 0.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        128.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "bush_1",
+                    "file": "01925a64-139d-7df2-9265-439642adefda.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 0.00000000,
+                        "y": 128.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        128.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "bush_2",
+                    "file": "01925a64-139e-70e0-bb96-f696f05844a0.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 128.00000000,
+                        "y": 128.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        128.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fishTile_052",
+                    "file": "01925a64-139f-7112-854b-1e4ffead1a9e.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 256.00000000,
+                        "y": 128.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        128.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fishTile_053",
+                    "file": "01925a64-13a0-7559-930e-df0979237d40.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 384.00000000,
+                        "y": 128.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        128.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fish_4",
+                    "file": "01925a64-2198-7e7c-9831-f486bfbb4559.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 512.00000000,
+                        "y": 128.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        64.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fish_1",
+                    "file": "01925a64-5c80-7050-b224-fa5f872e928c.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 640.00000000,
+                        "y": 128.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        64.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fish_2",
+                    "file": "01925a64-5c81-7638-8ddc-234866cab07b.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 768.00000000,
+                        "y": 128.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        64.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fish_5",
+                    "file": "01925a64-5c82-72c8-b4a8-e173601c2aa4.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 896.00000000,
+                        "y": 128.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        64.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fish_3",
+                    "file": "01925a64-5c83-76b0-8570-d9cce7212778.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 0.00000000,
+                        "y": 256.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        64.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "rock_1",
+                    "file": "01925a64-5c84-725a-84dc-542e0f5ae843.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 128.00000000,
+                        "y": 256.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        127.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "rock_2",
+                    "file": "01925a64-5c85-7129-8d7a-4a21e646a098.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 256.00000000,
+                        "y": 256.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        128.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "bones_4",
+                    "file": "01925a64-5c86-7902-872c-3d5e40ef2a8f.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 384.00000000,
+                        "y": 256.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        64.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "bones_1",
+                    "file": "01925a64-5c87-789c-bd95-acee787328b1.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 512.00000000,
+                        "y": 256.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        64.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "bones_2",
+                    "file": "01925a64-5c88-7c08-b053-48d121508a49.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 640.00000000,
+                        "y": 256.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        64.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "bones_5",
+                    "file": "01925a64-5c89-7458-81ca-11066bf6af2d.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 768.00000000,
+                        "y": 256.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        64.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "bones_3",
+                    "file": "01925a64-5c8a-75a0-aa99-cc8c9fecd3f8.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 896.00000000,
+                        "y": 256.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        64.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fish_7",
+                    "file": "01925a64-5c8b-7092-9c09-c51fd2b87a79.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 0.00000000,
+                        "y": 384.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        64.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fish_6",
+                    "file": "01925a64-5c8c-7c78-8510-e8d2433217e6.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 128.00000000,
+                        "y": 384.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        64.00000000,
+                        64.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "tank_glass",
+                    "file": "01925a67-e92e-7dc6-9976-28a4b7307142.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 640.00000000,
+                        "y": 384.00000000,
+                        "width": 100.00000000,
+                        "height": 100.00000000
+                    },
+                    "origin": [
+                        0.00000000,
+                        0.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "menu_button_hover",
+                    "file": "01925add-be98-7eec-90d0-b94f54f4187e.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 256.00000000,
+                        "y": 384.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        128.00000000,
+                        31.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "menu_button",
+                    "file": "01925add-be9a-7739-84fd-5e34ef55eec4.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 384.00000000,
+                        "y": 384.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        0.00000000,
+                        0.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "pointer",
+                    "file": "01925c72-ac78-79b3-bd98-ab7c32763f5e.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 840.00000000,
+                        "y": 384.00000000,
+                        "width": 64.00000000,
+                        "height": 64.00000000
+                    },
+                    "origin": [
+                        18.00000000,
+                        9.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "sand_1",
+                    "file": "01925c97-4793-7a39-926c-0ffbde94be62.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 512.00000000,
+                        "y": 384.00000000,
+                        "width": 128.00000000,
+                        "height": 128.00000000
+                    },
+                    "origin": [
+                        0.00000000,
+                        128.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "tank_glass_frame",
+                    "file": "01925cdc-214b-7cf5-be6e-eb92f7c6fa33.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 740.00000000,
+                        "y": 384.00000000,
+                        "width": 100.00000000,
+                        "height": 100.00000000
+                    },
+                    "origin": [
+                        0.00000000,
+                        0.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+    "config": {
+        "assets_dir": "assets",
+        "copy_files": true,
+        "auto_center": false,
+        "atlas_size": 1024
+    }
+}

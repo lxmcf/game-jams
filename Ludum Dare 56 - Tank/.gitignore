@@ -1,0 +1,6 @@
+tank
+
+package/
+
+*.exe
+*.obj

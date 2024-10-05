@@ -1,0 +1,5 @@
+IndentWidth: 4
+AlignConsecutiveAssignments: Consecutive
+PointerAlignment: Left
+SpaceBeforeParens: Always
+SpaceInEmptyBlock: true

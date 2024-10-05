@@ -1,0 +1,122 @@
+{
+    "fish": [
+        {
+            "sprite": "fish_1",
+            "position": [
+                525.90405273,
+                416.46777344
+            ],
+            "velocity": [
+                0.00000000,
+                0.00000000
+            ],
+            "move_method": 0,
+            "move_timer": 8.43444061,
+            "is_rare": false
+        },
+        {
+            "sprite": "fish_4",
+            "position": [
+                371.82611084,
+                250.86726379
+            ],
+            "velocity": [
+                0.00000000,
+                0.00000000
+            ],
+            "move_method": 0,
+            "move_timer": 7.18007135,
+            "is_rare": false
+        },
+        {
+            "sprite": "fish_2",
+            "position": [
+                570.49804688,
+                578.93920898
+            ],
+            "velocity": [
+                0.00000000,
+                0.00000000
+            ],
+            "move_method": 0,
+            "move_timer": 2.32464743,
+            "is_rare": false
+        },
+        {
+            "sprite": "fish_2",
+            "position": [
+                781.14117432,
+                368.80255127
+            ],
+            "velocity": [
+                0.00000000,
+                0.00000000
+            ],
+            "move_method": 0,
+            "move_timer": 3.55790019,
+            "is_rare": false
+        },
+        {
+            "sprite": "fish_5",
+            "position": [
+                114.37121582,
+                497.14868164
+            ],
+            "velocity": [
+                0.00000000,
+                0.00000000
+            ],
+            "move_method": 0,
+            "move_timer": 2.20021057,
+            "is_rare": false
+        },
+        {
+            "sprite": "fish_2",
+            "position": [
+                126.59152222,
+                322.31018066
+            ],
+            "velocity": [
+                0.00000000,
+                0.00000000
+            ],
+            "move_method": 0,
+            "move_timer": 2.91859078,
+            "is_rare": false
+        },
+        {
+            "sprite": "fish_4",
+            "position": [
+                307.85665894,
+                575.65734863
+            ],
+            "velocity": [
+                0.00000000,
+                0.00000000
+            ],
+            "move_method": 0,
+            "move_timer": 4.42558765,
+            "is_rare": false
+        },
+        {
+            "sprite": "fish_1",
+            "position": [
+                184.69866943,
+                559.31781006
+            ],
+            "velocity": [
+                0.00000000,
+                0.00000000
+            ],
+            "move_method": 0,
+            "move_timer": 2.46411324,
+            "is_rare": false
+        }
+    ],
+    "tank_bounds": {
+        "x": 0.00000000,
+        "y": 0.00000000,
+        "width": 1280.00000000,
+        "height": 720.00000000
+    }
+}

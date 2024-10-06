@@ -9,19 +9,14 @@ import "../assets"
 import ls "shared:lspx"
 import rl "vendor:raylib"
 
-Move_Method :: enum {
-    Jolt,
-    Smooth,
-    Random,
-}
-
 Fish :: struct {
-    sprite:      string,
-    position:    rl.Vector2,
-    velocity:    rl.Vector2,
-    move_method: Move_Method,
-    move_timer:  f32,
-    is_rare:     bool,
+    sprite:     string,
+    position:   rl.Vector2,
+    velocity:   rl.Vector2,
+    move_timer: f32,
+    is_rare:    bool,
+    size:       rl.Vector2,
+    dragging:   bool,
 }
 
 @(private = "file")
@@ -66,6 +61,7 @@ init_game :: proc() {
 
 update_game :: proc() -> Game_Scene {
     global_tick_counter += rl.GetFrameTime()
+    mouse_world_position := rl.GetScreenToWorld2D(rl.GetMousePosition(), internal.camera)
 
     if len(ctx.fish) > 0 {
         internal.ambiance_timer -= rl.GetFrameTime()
@@ -89,8 +85,6 @@ update_game :: proc() -> Game_Scene {
 
     mouse_wheel := rl.GetMouseWheelMove()
     if mouse_wheel != 0 && !rl.IsMouseButtonDown(.MIDDLE) {
-        mouse_world_position := rl.GetScreenToWorld2D(rl.GetMousePosition(), internal.camera)
-
         internal.camera.offset = rl.GetMousePosition()
         internal.camera.target = mouse_world_position
 
@@ -102,7 +96,6 @@ update_game :: proc() -> Game_Scene {
 
     internal.camera.zoom = math.lerp(internal.camera.zoom, target_zoom, rl.GetFrameTime() * 10)
 
-
     when ODIN_DEBUG {
         if rl.IsKeyDown(.LEFT_CONTROL) && rl.IsKeyReleased(.S) {
             rl.TraceLog(.INFO, "Game saved")
@@ -111,8 +104,35 @@ update_game :: proc() -> Game_Scene {
         }
     }
 
-    for &fish in ctx.fish {
-        update_fish(&fish)
+    for &fish, index in ctx.fish {
+        @(static)
+        drag_offset: rl.Vector2
+
+        if !fish.dragging {
+            update_fish(&fish)
+
+            if rl.Vector2Distance(fish.position, mouse_world_position) <= fish.size.y / 2 {
+                if rl.IsMouseButtonPressed(.LEFT) {
+                    fish.dragging = true
+
+                    drag_offset = mouse_world_position - fish.position
+                    rl.PlaySound(assets.sounds["water_2"])
+                }
+            }
+        } else {
+            fish.position = mouse_world_position - drag_offset
+
+            if rl.IsMouseButtonReleased(.LEFT) {
+
+                if rl.CheckCollisionPointRec(mouse_world_position, ctx.tank_bounds) {
+                    rl.PlaySound(assets.sounds["water_1"])
+                    fish.dragging = false
+                } else {
+                    rl.PlaySound(assets.sounds["sell_fish"])
+                    unordered_remove(&ctx.fish, index)
+                }
+            }
+        }
     }
 
     if rl.IsKeyReleased(.ESCAPE) {
@@ -172,11 +192,11 @@ create_random_fish :: proc() -> Fish {
 
     fish: Fish
     fish.sprite = rand.choice(fish_names[:])
-    fish.move_method = .Jolt
     fish.position.x = rand.float32_range(64, ctx.tank_bounds.width - 128)
     fish.position.y = rand.float32_range(64, ctx.tank_bounds.height - 128)
     fish.move_timer = rand.float32_range(2.5, 10)
     fish.is_rare = rand.int_max(100) == 99
+    fish.size = ls.GetSpriteOrigin(fish.sprite)
 
     return fish
 }
@@ -186,41 +206,33 @@ update_fish :: proc(fish: ^Fish) {
     fish.move_timer -= rl.GetFrameTime()
 
     if fish.move_timer <= 0 {
-        #partial switch fish.move_method {
-        case .Jolt:
-            fish.velocity = rl.Vector2Normalize({rand.float32_range(-1, 1), rand.float32_range(-1, 1)})
-            break
-
-        case .Smooth:
-            break
-        }
+        fish.velocity = rl.Vector2Normalize({rand.float32_range(-1, 1), rand.float32_range(-1, 1)})
 
         fish.move_timer = rand.float32_range(2.5, 10)
     }
 
-    size := ls.GetSpriteOrigin(fish.sprite)
-
-    if fish.position.x <= size.x || fish.position.x >= ctx.tank_bounds.width - (size.x * 2) {
+    if fish.position.x <= fish.size.x || fish.position.x >= ctx.tank_bounds.width - (fish.size.x * 2) {
         fish.velocity.x *= -1
         fish.move_timer += 2
     }
 
-    if fish.position.y <= size.y || fish.position.y >= ctx.tank_bounds.height - (size.y * 2) {
+    if fish.position.y <= fish.size.y || fish.position.y >= ctx.tank_bounds.height - (fish.size.y * 2) {
         fish.velocity.y *= -1
         fish.move_timer += 2
     }
 
     fish.position += (fish.velocity * rl.GetFrameTime()) * 40
 
-    fish.position.x = clamp(fish.position.x, size.x, ctx.tank_bounds.width - (size.x * 2))
-    fish.position.y = clamp(fish.position.y, size.y, ctx.tank_bounds.height - (size.y * 2))
+    fish.position.x = clamp(fish.position.x, fish.size.x, ctx.tank_bounds.width - (fish.size.x * 2))
+    fish.position.y = clamp(fish.position.y, fish.size.y, ctx.tank_bounds.height - (fish.size.y * 2))
 }
 
 @(private = "file")
 draw_fish :: proc(fish: Fish) {
-    ls.DrawSpritePro(fish.sprite, fish.position, rl.Vector2(1), 0, fish.velocity.x > 0 ? {} : {.Flip_Horizontal}, fish.is_rare ? rl.GOLD : rl.WHITE)
+    ls.DrawSpritePro(fish.sprite, fish.position, rl.Vector2(fish.dragging ? 1.1 : 1), 0, fish.velocity.x > 0 ? {} : {.Flip_Horizontal}, fish.is_rare ? rl.GOLD : rl.WHITE)
 
     when ODIN_DEBUG {
+        rl.DrawCircleLinesV(fish.position, fish.size.y / 2, rl.RED)
         rl.DrawLineV(fish.position, fish.position + fish.velocity * 64, rl.GREEN)
     }
 }

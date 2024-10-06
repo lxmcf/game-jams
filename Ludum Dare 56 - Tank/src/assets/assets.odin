@@ -3,6 +3,8 @@ package assets
 import ls "shared:lspx"
 import rl "vendor:raylib"
 
+import "core:fmt"
+import "core:path/filepath"
 import "core:strings"
 
 fonts: map[string]rl.Font
@@ -21,10 +23,7 @@ load_assets :: proc() {
     // Fonts
     fonts["menu_button"] = rl.LoadFontEx("font/concert_one.ttf", 56, nil, 255)
 
-    sounds["menu_button"] = rl.LoadSound("sound/menu_button.ogg")
-    sounds["water_1"] = rl.LoadSound("sound/water_1.ogg")
-    sounds["water_2"] = rl.LoadSound("sound/water_2.ogg")
-    sounds["water_3"] = rl.LoadSound("sound/water_3.ogg")
+    sounds = load_sounds("sound/*.ogg")
 }
 
 unload_assets :: proc() {
@@ -36,7 +35,11 @@ unload_assets :: proc() {
     for _, value in fonts do rl.UnloadFont(value)
     delete(fonts)
 
-    for _, value in sounds do rl.UnloadSound(value)
+    for key, sound in sounds {
+        rl.UnloadSound(sound)
+        delete(key)
+    }
+
     delete(sounds)
 }
 
@@ -48,4 +51,27 @@ dictionary_lookup :: proc(key: string) -> cstring {
     }
 
     return dictionary[key]
+}
+
+@(private)
+load_sounds :: proc(pattern: string) -> map[string]rl.Sound {
+    local_sounds := make(map[string]rl.Sound)
+
+    matches, err := filepath.glob(pattern)
+    if err == .Syntax_Error {
+        rl.TraceLog(.ERROR, "[ASSET] Invalid syntax")
+        return sounds
+    }
+
+    for match in matches {
+        index := strings.last_index_any(match, filepath.SEPARATOR_STRING)
+        path := strings.clone(filepath.stem(match[index + 1:]))
+        local_sounds[path] = rl.LoadSound(fmt.ctprintf("%s", match))
+
+        delete(match)
+    }
+
+    delete(matches)
+
+    return local_sounds
 }

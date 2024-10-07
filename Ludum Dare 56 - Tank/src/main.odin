@@ -20,6 +20,7 @@ Main_Context :: struct {
     window_should_close: bool,
     current_scene:       scenes.Game_Scene,
     tick_counter:        f32,
+    circles:             [10]Background_Circle,
 }
 
 ctx: Main_Context
@@ -61,16 +62,28 @@ main :: proc() {
     assets.load_assets()
     defer assets.unload_assets()
 
+    for i in 0 ..< len(ctx.circles) {
+        ctx.circles[i] = create_background_circle()
+    }
+
     if assets.sprites_loaded {
         rl.SetExitKey(.KEY_NULL)
         rl.HideCursor()
     }
 
     for !rl.WindowShouldClose() && !ctx.window_should_close {
+        for &circle in ctx.circles {
+            update_background_circle(&circle)
+        }
+
         update_current_scene()
 
         rl.BeginDrawing()
         defer rl.EndDrawing()
+
+        for circle in ctx.circles {
+            draw_background_circle(circle)
+        }
 
         if !assets.sprites_loaded {
             show_no_bundle_screen()
@@ -79,10 +92,6 @@ main :: proc() {
 
         draw_current_scene()
         ls.DrawSprite("pointer", rl.GetMousePosition())
-
-        if !rl.IsWindowFocused() {
-            rl.DrawRectangle(0, 0, rl.GetRenderWidth(), rl.GetRenderHeight(), rl.Fade(rl.BLACK, 0.25))
-        }
 
         when ODIN_DEBUG {
             debug_draw_fps()

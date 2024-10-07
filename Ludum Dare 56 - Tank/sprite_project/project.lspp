@@ -300,7 +300,7 @@
                     }
                 },
                 {
-                    "name": "fish_2",
+                    "name": "fish_3",
                     "file": "01925a64-5c81-7638-8ddc-234866cab07b.png",
                     "atlas": "atlas",
                     "source": {
@@ -342,7 +342,7 @@
                     }
                 },
                 {
-                    "name": "fish_3",
+                    "name": "fish_2",
                     "file": "01925a64-5c83-76b0-8570-d9cce7212778.png",
                     "atlas": "atlas",
                     "source": {
@@ -669,6 +669,27 @@
                     "origin": [
                         0.00000000,
                         0.00000000
+                    ],
+                    "animation": {
+                        "speed": 0.00000000,
+                        "frames": [
+
+                        ]
+                    }
+                },
+                {
+                    "name": "fish_egg",
+                    "file": "0192649c-138b-7352-8e82-485dd4018546.png",
+                    "atlas": "atlas",
+                    "source": {
+                        "x": 904.00000000,
+                        "y": 384.00000000,
+                        "width": 48.00000000,
+                        "height": 48.00000000
+                    },
+                    "origin": [
+                        24.00000000,
+                        48.00000000
                     ],
                     "animation": {
                         "speed": 0.00000000,

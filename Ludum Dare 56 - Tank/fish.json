@@ -1,0 +1,51 @@
+{
+    "fish_1": {
+        "price_buy": 10,
+        "price_sell": 15,
+        "rarity_factor": 50,
+        "speed_factor": 1.00000000,
+        "speed_factor_age": 1.00000000
+    },
+    "fish_2": {
+        "price_buy": 25,
+        "price_sell": 35,
+        "rarity_factor": 65,
+        "speed_factor": 1.25000000,
+        "speed_factor_age": 0.90000000
+    },
+    "fish_3": {
+        "price_buy": 35,
+        "price_sell": 50,
+        "rarity_factor": 75,
+        "speed_factor": 0.90000000,
+        "speed_factor_age": 0.85000000
+    },
+    "fish_4": {
+        "price_buy": 55,
+        "price_sell": 75,
+        "rarity_factor": 85,
+        "speed_factor": 0.80000000,
+        "speed_factor_age": 0.80000000
+    },
+    "fish_5": {
+        "price_buy": 80,
+        "price_sell": 95,
+        "rarity_factor": 95,
+        "speed_factor": 0.65000000,
+        "speed_factor_age": 0.60000000
+    },
+    "fish_6": {
+        "price_buy": 100,
+        "price_sell": 125,
+        "rarity_factor": 115,
+        "speed_factor": 1.50000000,
+        "speed_factor_age": 0.45000000
+    },
+    "fish_7": {
+        "price_buy": 200,
+        "price_sell": 300,
+        "rarity_factor": 125,
+        "speed_factor": 0.50000000,
+        "speed_factor_age": 0.25000000
+    }
+}

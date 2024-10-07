@@ -22,6 +22,7 @@ load_assets :: proc() {
 
     // Fonts
     fonts["menu_button"] = rl.LoadFontEx("font/concert_one.ttf", 56, nil, 255)
+    fonts["game_button"] = rl.LoadFontEx("font/concert_one.ttf", 48, nil, 255)
 
     sounds = load_sounds("sound/*.ogg")
 }

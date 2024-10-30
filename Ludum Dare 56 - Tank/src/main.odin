@@ -62,13 +62,14 @@ main :: proc() {
     assets.load_assets()
     defer assets.unload_assets()
 
-    for i in 0 ..< len(ctx.circles) {
-        ctx.circles[i] = create_background_circle()
-    }
 
     if assets.sprites_loaded {
         rl.SetExitKey(.KEY_NULL)
         rl.HideCursor()
+
+        for i in 0 ..< len(ctx.circles) {
+            ctx.circles[i] = create_background_circle()
+        }
     }
 
     for !rl.WindowShouldClose() && !ctx.window_should_close {
